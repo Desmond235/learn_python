@@ -1,0 +1,3 @@
+
+
+fruit = {"apple", "orange","banana"}
