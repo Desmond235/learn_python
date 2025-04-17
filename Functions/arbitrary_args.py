@@ -23,13 +23,16 @@ def shipping_label(*args, **kwargs):
 
     if 'apt' in kwargs:
         print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+    elif 'pobox' in kwargs:
+        print(f'{kwargs.get('street')}')
+        print(f'{kwargs.get('pobox')}')
     else:
         print(f'{kwargs.get('street')}')
-    print(f'{kwargs.get('city')} {kwargs.get('region')} {kwargs.get('zip')}')
 
+    print(f'{kwargs.get('city')} {kwargs.get('region')} {kwargs.get('zip')}')
 shipping_label("Dr.", "Desmond", "Mawuta", "III",
                street="123 makeup street",
-               apt="100",
+               apt="#100",
                city="Accra",
                region='Greater Accra',
                zip='4984')
