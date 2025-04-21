@@ -1,8 +1,6 @@
 import string
 import random
 
-from streamlit import radio
-
 chars = " " + string.punctuation + string.digits + string.ascii_letters
 chars = list(chars)
 key = chars.copy()
