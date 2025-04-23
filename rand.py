@@ -1,4 +1,4 @@
-# number guessing game
+# number guessing games
 import random
 
 lowest_num = 1

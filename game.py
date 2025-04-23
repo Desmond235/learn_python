@@ -1,5 +1,5 @@
-# Madlibs game
-# word game where you create a story
+# Madlibs games
+# word games where you create a story
 # by  filling in blanks with random words
 
 adjective1 = input("Enter an adjective (description):")
