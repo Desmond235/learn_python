@@ -28,11 +28,12 @@ hangman_art = {
 }
 
 
-def display_man (wrong_guesses):
+def display_man (wrong_guesses:int) -> None:
     print('***********')
     for line in hangman_art[wrong_guesses]:
         print(line)
     print('***********')
+
 def display_hint(hint):
     print(" ".join(hint))
 
@@ -79,5 +80,6 @@ def main():
             display_answer(answer)
             print("YOU LOSE")
             is_running = False
+
 if __name__ == "__main__":
     main()
