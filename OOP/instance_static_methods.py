@@ -17,8 +17,10 @@ class Employee:
         return position
 
 
-employee = Employee("Desmond", "Manager")
-print(employee.name)
-print(employee.position)
-print(employee.get_info())
-print(Employee.is_valid_position(employee.position))
+employee1 = Employee("Desmond", "Manager")
+employee2 = Employee("Francis", 'Cook')
+
+print(employee1.name)
+print(employee1.position)
+print(employee1.get_info())
+print(Employee.is_valid_position(employee1.position))
