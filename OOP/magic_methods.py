@@ -1,3 +1,5 @@
+from tenacity import retry_unless_exception_type
+
 
 class Book:
     def __init__(self,title, author, num_pages):
@@ -12,14 +14,31 @@ class Book:
         return self.title == other.title and self.author == other.title
 
     def __lt__(self, other):
-        return self.num_pages == other.num_pages
+        return self.num_pages < other.num_pages
 
     def __gt__(self, other):
         return self.num_pages > other.num_pages
 
+    def __le__(self, other):
+        return self.num_pages <= other.num_pages
+
+    def __contains__(self, item):
+        return item in self.title or item in self.author
+
+    def __getitem__(self, item):
+        if item == "title":
+            return self.title
+        elif item == "author":
+            return self.author
+        elif item == "num_pages":
+            return self.num_pages
+        else:
+            return "Item not found"
+
 book1 = Book('Hobbit', 'J.R.R. Tolkein', 310)
 book2 = Book("Harry Potter and the Philosopher's Stone", 'J.K. Rowling', 223)
 book3 = Book("The Lion, the Witch and the Wardrobe", 'C.S Lewis', 172)
+book4 = Book("Harry Potter and the Philosopher's Stone", 'J.K. Rowling', 223)
 
-print(book1)
-print(book1 > book2)
+print("Lion" in book3)
+print(book1["num_pages"])
