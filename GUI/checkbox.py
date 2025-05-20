@@ -28,6 +28,10 @@ class MainWindow(QMainWindow):
             background-color: white;
             color: black
             }
+            
+            QCalendarWidget QCalendar{
+                background-color: red;
+            }
            /* Tool buttons (month/year title, arrows) */
     QCalendarWidget QToolButton {
         background-color: #e6e6e6;
