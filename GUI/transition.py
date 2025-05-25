@@ -38,7 +38,7 @@ class SlideTransition(QWidget):
         self.animate_transition(self.page2, self.page1, direction='right')
 
     def animate_transition(self, from_page, to_page, direction='left'):
-        current_index = self.stack.indexOf(from_page)
+        self.stack.indexOf(from_page)
         next_index = self.stack.indexOf(to_page)
         self.stack.setCurrentIndex(next_index)
 
