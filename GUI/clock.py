@@ -2,12 +2,12 @@ import os
 import sys
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QLabel, QVBoxLayout, 
-    QTimeEdit, QDialog, QPushButton)
+)
 
 from PyQt5.QtGui import QFont, QFontDatabase
 from PyQt5.QtCore import QTimer, QTime, Qt, QDateTime
 
-from GUI.timer_setter_dialog import TimeSetterDialog
+from timer_setter_dialog import TimeSetterDialog
     
 class Clock(QWidget):
     def __init__(self):
@@ -70,7 +70,7 @@ class Clock(QWidget):
             now = QDateTime.currentDateTime()
             new_datetime = QDateTime(
                 now.date(),
-                QTime(new_time.hour(), new_time.minute(), new_time.second())   
+                QTime(new_time.hour(), new_time.minute(), new_time.second())
             )
             self.offest_secs = now.secsTo(new_datetime)
             self.update_time()
